@@ -13,6 +13,22 @@
 
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // ظهور الأقسام عند التمرير
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  if (revealEls.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
   // إظهار كتلة النوع المختار وإخفاء الباقي.
   // الحقول المخفية تُعطّل (disabled) حتى تُستثنى من التحقق ومن FormData؛
   // الحقول المطلوبة معرّفة بـ required في الـ HTML ويتم تجاهلها تلقائياً وهي معطّلة.

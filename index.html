@@ -22,14 +22,20 @@
     </nav>
 
     <div class="hero-inner">
-      <img src="assets/images/logo.png" alt="شعار M3DSTORE" class="hero-logo" onerror="this.style.display='none'" />
-      <h1 class="hero-title">بطاقتك الذكية بلمسة واحدة</h1>
-      <p class="hero-sub">بطاقات أعمال NFC من نوع PVC — تصميم احترافي وطباعة عالية الجودة، شارك بياناتك بلمسة واحدة على أي جوال.</p>
-      <a href="#packages" class="btn btn-primary">اطلب بطاقتك الآن</a>
+      <div class="hero-logo-wrap">
+        <span class="nfc-wave"></span>
+        <span class="nfc-wave"></span>
+        <span class="nfc-wave"></span>
+        <img src="assets/images/logo.png" alt="شعار M3DSTORE" class="hero-logo" onerror="this.style.display='none'" />
+      </div>
+      <span class="hero-eyebrow">جديد · بطاقات NFC ذكية</span>
+      <h1 class="hero-title">بطاقة عمل واحدة <span class="accent">تكفي.</span></h1>
+      <p class="hero-sub">لمسة بسيطة على ظهر الجوال — وكل بياناتك تنتقل في ثانية. بدون أوراق، بدون تطبيقات، بدون أخطاء كتابة.</p>
+      <a href="#packages" class="btn btn-primary">شوف الباقات ↓</a>
     </div>
   </header>
 
-  <section class="section how" id="how">
+  <section class="section how" id="how" data-reveal>
     <h2 class="section-title">كيف تعمل بطاقة NFC؟</h2>
     <div class="steps">
       <div class="step">
@@ -65,7 +71,33 @@
     </div>
   </section>
 
-  <section class="section packages" id="packages">
+  <section class="section why" data-reveal>
+    <h2 class="section-title">ليش تختار M3DSTORE؟</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="why-num">01</span>
+        <h3>بطاقة بدل ٥٠ بطاقة</h3>
+        <p>وفّر طباعة العمر، عدّل بياناتك في ثانية بدون ما ترمي بطاقة وحدة.</p>
+      </div>
+      <div class="why-item">
+        <span class="why-num">02</span>
+        <h3>تشتغل على أي جوال</h3>
+        <p>iPhone وAndroid — بدون تطبيق، بدون إعداد. لمسة وخلاص.</p>
+      </div>
+      <div class="why-item">
+        <span class="why-num">03</span>
+        <h3>تصميم سعودي بذوق</h3>
+        <p>نهتم بتفاصيل البراند العربي — الخط، الاتجاه، الذوق. مو قوالب جاهزة.</p>
+      </div>
+      <div class="why-item">
+        <span class="why-num">04</span>
+        <h3>تسليم سريع</h3>
+        <p>٣ إلى ٥ أيام عمل، وتوصيل لكل مدن المملكة.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section packages" id="packages" data-reveal>
     <h2 class="section-title">اختر طريقتك</h2>
     <p class="section-sub">ثلاث طرق حسب اللي تجهّزه أنت — والباقي علينا. الأسعار شاملة برمجة البطاقة.</p>
 
@@ -128,6 +160,12 @@
       <div class="footer-copy">© <span id="year"></span> M3DSTORE — جميع الحقوق محفوظة.</div>
     </div>
   </footer>
+
+  <a href="https://wa.me/966566123883" target="_blank" rel="noopener" class="wa-fab" aria-label="تواصل واتساب">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+      <path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6A12 12 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.5zM12 22a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 22 12c0 5.5-4.5 10-10 10zm5.5-7.5c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.4.1-.6c.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/>
+    </svg>
+  </a>
 
   <script src="assets/js/script.js"></script>
 </body>
