@@ -18,14 +18,14 @@
         <img src="assets/images/logo.png" alt="M3DSTORE" class="nav-logo" onerror="this.style.display='none'" />
         <span class="nav-name">M3DSTORE</span>
       </div>
-      <a href="#order-form" class="btn btn-ghost">اطلب الآن</a>
+      <a href="#packages" class="btn btn-ghost">اطلب الآن</a>
     </nav>
 
     <div class="hero-inner">
       <img src="assets/images/logo.png" alt="شعار M3DSTORE" class="hero-logo" onerror="this.style.display='none'" />
       <h1 class="hero-title">بطاقتك الذكية بلمسة واحدة</h1>
       <p class="hero-sub">بطاقات أعمال NFC من نوع PVC — تصميم احترافي وطباعة عالية الجودة، شارك بياناتك بلمسة واحدة على أي جوال.</p>
-      <a href="#order-form" class="btn btn-primary">اطلب بطاقتك الآن</a>
+      <a href="#packages" class="btn btn-primary">اطلب بطاقتك الآن</a>
     </div>
   </header>
 
@@ -81,7 +81,7 @@
           <li>جاهزة للاستخدام فوراً</li>
           <li>الأسرع والأوفر</li>
         </ul>
-        <button type="button" class="btn btn-outline" data-service="بطاقة مبرمجة">اطلب هذه الطريقة</button>
+        <a class="btn btn-outline" href="order.html?service=programmed">اطلب هذه الطريقة</a>
       </article>
 
       <article class="card card-featured">
@@ -96,7 +96,7 @@
           <li>نبرمج فيها رابطك</li>
           <li>بدون أي تعديل على تصميمك</li>
         </ul>
-        <button type="button" class="btn btn-primary" data-service="اطبع تصميمك">اطلب هذه الطريقة</button>
+        <a class="btn btn-primary" href="order.html?service=print">اطلب هذه الطريقة</a>
       </article>
 
       <article class="card">
@@ -110,151 +110,9 @@
           <li>برمجة الرابط داخلها</li>
           <li>تعديلات حتى ترضى</li>
         </ul>
-        <button type="button" class="btn btn-outline" data-service="صمّم واطبع">اطلب هذه الطريقة</button>
+        <a class="btn btn-outline" href="order.html?service=design">اطلب هذه الطريقة</a>
       </article>
     </div>
-  </section>
-
-  <section class="section order" id="order-form">
-    <h2 class="section-title">اطلب بطاقتك</h2>
-    <p class="section-sub">عبّي البيانات وراح يتم تحويلك لواتساب لإكمال الطلب.</p>
-
-    <form class="form" id="orderForm" novalidate>
-      <label class="field">
-        <span>نوع الخدمة <em>*</em></span>
-        <select name="service" id="serviceSelect" required>
-          <option value="">اختر نوع الخدمة</option>
-          <option value="بطاقة مبرمجة">بطاقة مبرمجة — 49 ر.س</option>
-          <option value="اطبع تصميمك">اطبع تصميمك — 89 ر.س</option>
-          <option value="صمّم واطبع">صمّم واطبع — 149 ر.س</option>
-        </select>
-      </label>
-
-      <!-- النوع ١: بطاقة مبرمجة -->
-      <div class="conditional" data-for="بطاقة مبرمجة">
-        <label class="field">
-          <span>الرابط المراد برمجته <em>*</em></span>
-          <input type="url" name="link" data-label="الرابط" placeholder="https://..." inputmode="url" required disabled />
-          <small class="hint">رابط موقعك أو حسابك أو بروفايلك الذي ستفتحه البطاقة.</small>
-        </label>
-      </div>
-
-      <!-- النوع ٢: اطبع تصميمك -->
-      <div class="conditional" data-for="اطبع تصميمك">
-        <label class="field">
-          <span>الرابط المراد برمجته <em>*</em></span>
-          <input type="url" name="link_print" data-label="الرابط" placeholder="https://..." inputmode="url" required disabled />
-          <small class="hint">سنبرمجه داخل البطاقة بعد طباعة تصميمك.</small>
-        </label>
-        <label class="field">
-          <span>ملف التصميم الجاهز <em>*</em></span>
-          <input type="file" name="design_file" data-label="ملف التصميم" accept="image/*,.pdf,.ai,.psd" required disabled />
-          <small class="hint">المواصفات: مقاس ٨٫٥×٥٫٥ سم، دقة ٣٠٠ DPI على الأقل، صيغة PDF أو PNG. سيُطلب منك إرفاقه في الواتساب بعد الإرسال.</small>
-        </label>
-      </div>
-
-      <!-- النوع ٣: صمّم واطبع — نموذج طلب تصميم احترافي -->
-      <div class="conditional" data-for="صمّم واطبع">
-        <p class="brief-title">📋 نموذج طلب التصميم — كل ما نحتاجه لتصميم بطاقتك باحترافية:</p>
-
-        <div class="form-row">
-          <label class="field">
-            <span>المسمى الوظيفي</span>
-            <input type="text" name="b_title" data-label="المسمى الوظيفي" placeholder="مثال: مدير تنفيذي" disabled />
-          </label>
-          <label class="field">
-            <span>اسم الشركة / النشاط</span>
-            <input type="text" name="b_company" data-label="الشركة / النشاط" disabled />
-          </label>
-        </div>
-
-        <div class="form-row">
-          <label class="field">
-            <span>البريد الإلكتروني</span>
-            <input type="email" name="b_email" data-label="الإيميل" placeholder="name@example.com" disabled />
-          </label>
-          <label class="field">
-            <span>الموقع / الرابط المراد برمجته <em>*</em></span>
-            <input type="url" name="b_link" data-label="الرابط" placeholder="https://..." required disabled />
-          </label>
-        </div>
-
-        <label class="field">
-          <span>الحسابات التي تريد إظهارها على البطاقة</span>
-          <input type="text" name="b_socials" data-label="الحسابات" placeholder="إنستقرام، تويتر/X، لينكدإن، سناب..." disabled />
-        </label>
-
-        <div class="form-row">
-          <label class="field">
-            <span>هل لديك شعار؟ <em>*</em></span>
-            <select name="b_logo" data-label="الشعار" required disabled>
-              <option value="">اختر</option>
-              <option value="نعم، لدي شعار وسأرفقه">نعم، لدي شعار وسأرفقه</option>
-              <option value="لا، أحتاج تصميم شعار">لا، أحتاج تصميم شعار</option>
-            </select>
-          </label>
-          <label class="field">
-            <span>الستايل المفضل <em>*</em></span>
-            <select name="b_style" data-label="الستايل" required disabled>
-              <option value="">اختر</option>
-              <option value="عصري / بسيط">عصري / بسيط (Minimal)</option>
-              <option value="فخم / راقي">فخم / راقي (Luxury)</option>
-              <option value="كلاسيكي">كلاسيكي</option>
-              <option value="جريء / ملوّن">جريء / ملوّن</option>
-              <option value="غير متأكد، اقترحوا علي">غير متأكد، اقترحوا علي</option>
-            </select>
-          </label>
-        </div>
-
-        <label class="field">
-          <span>الألوان المفضلة</span>
-          <input type="text" name="b_colors" data-label="الألوان" placeholder="مثال: أسود وذهبي — أو ألوان شعاري" disabled />
-        </label>
-
-        <label class="field">
-          <span>جملة أو شعار تسويقي (اختياري)</span>
-          <input type="text" name="b_slogan" data-label="الجملة التسويقية" disabled />
-        </label>
-
-        <label class="field">
-          <span>تفاصيل إضافية أو أمثلة تعجبك (اختياري)</span>
-          <textarea name="b_refs" data-label="تفاصيل إضافية" rows="3" placeholder="أرفق في الواتساب صوراً لبطاقات أعجبتك، أو اكتب أي ملاحظة تساعد المصمم." disabled></textarea>
-        </label>
-      </div>
-
-      <div class="form-row">
-        <label class="field">
-          <span>الاسم الكامل <em>*</em></span>
-          <input type="text" name="name" required autocomplete="name" />
-        </label>
-        <label class="field">
-          <span>رقم الجوال <em>*</em></span>
-          <input type="tel" name="phone" required inputmode="tel" placeholder="05XXXXXXXX" autocomplete="tel" />
-        </label>
-      </div>
-
-      <label class="field">
-        <span>الكمية <em>*</em></span>
-        <input type="number" name="quantity" required min="1" value="1" />
-      </label>
-
-      <label class="field">
-        <span>ملاحظات</span>
-        <textarea name="notes" rows="3"></textarea>
-      </label>
-
-      <div class="form-actions">
-        <button type="submit" class="btn btn-primary btn-lg">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
-            <path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6A12 12 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.5zM12 22a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 22 12c0 5.5-4.5 10-10 10zm5.5-7.5c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.4.1-.6c.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/>
-          </svg>
-          إرسال الطلب عبر واتساب
-        </button>
-        <p class="form-note" id="formNote" hidden>
-          📎 لا تنسى إرفاق صورة الشعار/التصميم في محادثة الواتساب.
-        </p>
-      </div>
-    </form>
   </section>
 
   <footer class="footer">

@@ -32,24 +32,26 @@
     })[0];
   }
 
+  // ربط أسماء الباقات القصيرة في الرابط بقيم القائمة
+  const SERVICE_SLUGS = {
+    programmed: 'بطاقة مبرمجة',
+    print: 'اطبع تصميمك',
+    design: 'صمّم واطبع',
+  };
+
   if (serviceSelect) {
     serviceSelect.addEventListener('change', function () {
       toggleConditional(serviceSelect.value);
     });
+
+    // الباقة المختارة من الصفحة الرئيسية تصل عبر ?service=slug
+    const slug = new URLSearchParams(location.search).get('service');
+    if (slug && SERVICE_SLUGS[slug]) {
+      serviceSelect.value = SERVICE_SLUGS[slug];
+    }
+
     toggleConditional(serviceSelect.value); // الحالة الابتدائية
   }
-
-  document.querySelectorAll('[data-service]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      const service = btn.getAttribute('data-service');
-      if (serviceSelect) {
-        serviceSelect.value = service;
-        toggleConditional(service);
-      }
-      const target = document.getElementById('order-form');
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
 
   if (!form) return;
 

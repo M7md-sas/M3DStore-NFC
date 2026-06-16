@@ -52,7 +52,7 @@ button { font-family: inherit; cursor: pointer; }
   box-shadow: var(--shadow-md);
   letter-spacing: 0.2px;
 }
-.btn-primary:hover { filter: brightness(1.06); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.btn-primary:hover { background: var(--ink); color: var(--gold); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
 .btn-outline {
   background: transparent;
   color: var(--gold-deep);
@@ -68,6 +68,13 @@ button { font-family: inherit; cursor: pointer; }
 }
 .btn-ghost:hover { background: var(--cream-2); }
 .btn-lg { padding: 16px 32px; font-size: 17px; }
+
+/* ---------- Order page top bar ---------- */
+.order-top {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+  border-bottom: 1px solid var(--line);
+}
+.order-top .nav-brand { text-decoration: none; }
 
 /* ---------- Hero ---------- */
 .hero {

@@ -6,7 +6,8 @@
 
 ```
 /
-├── index.html              الصفحة الرئيسية (كل المحتوى والنصوص)
+├── index.html              الصفحة الرئيسية (العرض والباقات)
+├── order.html              صفحة الطلب (النموذج) — تفتح عند اختيار باقة
 ├── assets/
 │   ├── css/
 │   │   └── styles.css      كل التنسيقات والألوان
@@ -28,7 +29,9 @@
 
 | أبغى أعدّل... | الملف | المكان |
 |---|---|---|
-| الأسعار / نصوص الباقات | [index.html](index.html) | قسم `<section class="section packages">` **+** قائمة `<select id="serviceSelect">` |
+| أسعار/نصوص الباقات | [index.html](index.html) | قسم `<section class="section packages">` |
+| أسعار قائمة النموذج | [order.html](order.html) | قائمة `<select id="serviceSelect">` |
+| حقول نموذج الطلب | [order.html](order.html) | داخل `<form id="orderForm">` |
 | رقم الواتساب | [assets/js/script.js](assets/js/script.js) | المتغيّر `WHATSAPP_NUMBER` في أعلى الملف |
 | روابط الواتساب/الإنستقرام في الأسفل | [index.html](index.html) | قسم `<footer>` |
 | الألوان والهوية | [assets/css/styles.css](assets/css/styles.css) | المتغيّرات في `:root` بأعلى الملف |
