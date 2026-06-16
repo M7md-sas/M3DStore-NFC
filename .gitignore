@@ -1,0 +1,11 @@
+# أدوات محلية / معاينة
+.claude/
+
+# ملفات نظام التشغيل
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ملفات مؤقتة
+*.tmp
+_gallery.html
