@@ -55,6 +55,12 @@
     design: 'صمّم واطبع',
   };
 
+  const SERVICE_PRICES = {
+    'بطاقة مبرمجة': '60 ر.س',
+    'اطبع تصميمك': '100 ر.س',
+    'صمّم واطبع': '180 ر.س',
+  };
+
   if (serviceSelect) {
     serviceSelect.addEventListener('change', function () {
       toggleConditional(serviceSelect.value);
@@ -89,6 +95,7 @@
       'السلام عليكم، أبغى أطلب بطاقة NFC:',
       '',
       '• نوع الخدمة: ' + service,
+      '• السعر: ' + (SERVICE_PRICES[service] || ''),
     ];
 
     // حقول النوع المختار (تُبنى تلقائياً من data-label)
