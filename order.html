@@ -25,6 +25,7 @@
   <section class="section order" id="order-form" data-reveal>
     <h2 class="section-title">اطلب بطاقتك</h2>
     <p class="section-sub">عبّي البيانات وراح يتم تحويلك لواتساب لإكمال الطلب.</p>
+    <p class="pay-note">💳 الدفع: تحويل بنكي أو STC Pay — يتم التنسيق معك في الواتساب. <strong>لا تُدخل أي بيانات دفع هنا.</strong></p>
 
     <form class="form" id="orderForm" novalidate>
       <label class="field">
@@ -140,9 +141,20 @@
         </label>
       </div>
 
+      <div class="form-row">
+        <label class="field">
+          <span>المدينة <em>*</em></span>
+          <input type="text" name="city" required autocomplete="address-level2" placeholder="مثال: الرياض" />
+        </label>
+        <label class="field">
+          <span>الكمية <em>*</em></span>
+          <input type="number" name="quantity" required min="1" value="1" />
+        </label>
+      </div>
+
       <label class="field">
-        <span>الكمية <em>*</em></span>
-        <input type="number" name="quantity" required min="1" value="1" />
+        <span>العنوان / أقرب نقطة دالة <small>(اختياري)</small></span>
+        <input type="text" name="address" autocomplete="street-address" placeholder="الحي، الشارع، أو وصف يسهّل التوصيل" />
       </label>
 
       <label class="field">

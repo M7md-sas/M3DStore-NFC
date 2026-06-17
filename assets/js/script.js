@@ -117,6 +117,9 @@
     // الحقول المشتركة
     lines.push('• الاسم: ' + get('name'));
     lines.push('• الجوال: ' + get('phone'));
+    lines.push('• المدينة: ' + get('city'));
+    const address = get('address');
+    if (address) lines.push('• العنوان: ' + address);
     lines.push('• الكمية: ' + get('quantity'));
     const notes = get('notes');
     if (notes) lines.push('• ملاحظات: ' + notes);
