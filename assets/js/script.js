@@ -130,6 +130,15 @@
       formNote.hidden = service !== 'اطبع تصميمك';
     }
 
-    window.open(url, '_blank', 'noopener');
+    const win = window.open(url, '_blank', 'noopener');
+
+    // إذا حجب المتصفح النافذة المنبثقة، أظهر رابطاً احتياطياً بدل الفشل الصامت
+    const sent = document.getElementById('formSent');
+    const fallback = document.getElementById('waFallback');
+    if (fallback) fallback.href = url;
+    if (sent) {
+      sent.hidden = false;
+      sent.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   });
 })();
