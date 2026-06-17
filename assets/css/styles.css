@@ -294,6 +294,51 @@ button { font-family: inherit; cursor: pointer; }
 }
 .packages .pay-note strong { color: var(--gold); }
 
+/* ---------- NFC Intro ---------- */
+.nfc-intro { text-align: center; }
+.intro-tag {
+  display: inline-block;
+  background: rgba(212, 175, 69, 0.1);
+  color: var(--gold-dark);
+  border: 1px solid rgba(212, 175, 69, 0.3);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 40px;
+}
+.intro-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.intro-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--gold); }
+.intro-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--gold-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.intro-icon svg { width: 26px; height: 26px; }
+.intro-card h3 { font-size: 17px; font-weight: 900; color: var(--ink); margin: 0 0 8px; }
+.intro-card p { font-size: 14px; color: var(--ink-soft); margin: 0; line-height: 1.7; }
+
 /* ---------- Steps (How it works) ---------- */
 .how {
   box-shadow: inset 0 14px 26px -16px rgba(28, 23, 16, 0.3);
@@ -311,7 +356,9 @@ button { font-family: inherit; cursor: pointer; }
   text-align: center;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--line);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
+.step:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--gold); }
 .step-icon {
   width: 64px;
   height: 64px;
@@ -735,6 +782,7 @@ button { font-family: inherit; cursor: pointer; }
 
 @media (min-width: 720px) {
   .steps { grid-template-columns: repeat(3, 1fr); }
+  .intro-grid { grid-template-columns: repeat(3, 1fr); }
   .cards { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
   .why-grid { grid-template-columns: repeat(4, 1fr); }
   .form-row { grid-template-columns: 1fr 1fr; }
