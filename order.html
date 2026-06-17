@@ -137,7 +137,7 @@
         </label>
         <label class="field">
           <span>رقم الجوال <em>*</em></span>
-          <input type="tel" name="phone" required inputmode="tel" placeholder="05XXXXXXXX" autocomplete="tel" />
+          <input type="tel" name="phone" required inputmode="tel" placeholder="05XXXXXXXX" autocomplete="tel" pattern="05[0-9]{8}" title="أدخل رقم جوال سعودي صحيح يبدأ بـ 05 (10 أرقام)" />
         </label>
       </div>
 
@@ -148,7 +148,8 @@
         </label>
         <label class="field">
           <span>الكمية <em>*</em></span>
-          <input type="number" name="quantity" required min="1" value="1" />
+          <input type="number" name="quantity" required min="1" max="100" value="1" />
+          <small class="hint">للكميات الكبيرة (أكثر من ١٠٠) تواصل معنا مباشرة في الواتساب.</small>
         </label>
       </div>
 
@@ -169,6 +170,7 @@
           </svg>
           إرسال الطلب عبر واتساب
         </button>
+        <p class="delivery-note">🚚 التوصيل لكل مدن المملكة خلال ٤ إلى ٧ أيام عمل.</p>
         <p class="form-note" id="formNote" hidden>
           📎 لا تنسى إرفاق صورة الشعار/التصميم في محادثة الواتساب.
         </p>

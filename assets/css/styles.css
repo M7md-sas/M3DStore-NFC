@@ -242,7 +242,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .hero-sub {
   font-size: clamp(15px, 1.8vw, 17px);
-  color: rgba(247, 238, 221, 0.65);
+  color: rgba(247, 238, 221, 0.85);
   max-width: 480px;
   margin: 0 0 32px;
 }
@@ -480,6 +480,20 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 15px;
 }
 .card-list li:last-child { border-bottom: none; }
+
+/* أزرار البطاقات: الذهبي الممتلئ حصري للباقة المميزة.
+   أزرار البقية (outline) تتحوّل عند المرور للداكن — لا للذهبي — حتى لا تشبه الزر المميز. */
+.cards .btn-outline:hover {
+  background: var(--ink);
+  color: var(--gold);
+  border-color: var(--ink);
+}
+.card-featured .btn-primary:hover {
+  background: linear-gradient(135deg, #E8C75C 0%, var(--gold-dark) 100%);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
 .card-list li::before {
   content: '✓';
   color: var(--gold-dark);
@@ -557,6 +571,7 @@ button { font-family: inherit; cursor: pointer; }
   outline: none;
   border-color: var(--gold-dark);
   background: var(--white);
+  box-shadow: 0 0 0 3px rgba(212, 175, 69, 0.25);
 }
 .field input[type="file"] {
   padding: 10px;
@@ -571,6 +586,12 @@ button { font-family: inherit; cursor: pointer; }
 .form-actions {
   text-align: center;
   margin-top: 28px;
+}
+.delivery-note {
+  margin: 14px auto 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 700;
 }
 .form-note {
   margin: 16px auto 0;
@@ -732,7 +753,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ---------- Floating WhatsApp button ---------- */
 .wa-fab {
   position: fixed;
-  left: 20px;
+  right: 20px;
   bottom: 20px;
   z-index: 99;
   width: 56px;
