@@ -362,9 +362,12 @@ button { font-family: inherit; cursor: pointer; }
   width: 100%;
   height: 260px;
   object-fit: cover;
+  object-position: center;
   background: var(--cream-2);
   display: block;
 }
+/* صورة RESIDCO عمودية والبطاقة في أسفلها — ننحاز للأسفل لإبرازها */
+.work-item:first-child img { object-position: center 70%; }
 .work-item figcaption {
   padding: 16px 18px;
   text-align: center;
