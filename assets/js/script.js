@@ -61,9 +61,25 @@
     'صمّم واطبع': '180 ر.س',
   };
 
+  // تحديث بطاقة ملخص الباقة المختارة (الاسم + السعر)
+  const summaryBox = document.getElementById('orderSummary');
+  const summaryName = document.getElementById('summaryName');
+  const summaryPrice = document.getElementById('summaryPrice');
+  function updateSummary(service) {
+    if (!summaryBox) return;
+    if (service && SERVICE_PRICES[service]) {
+      if (summaryName) summaryName.textContent = service;
+      if (summaryPrice) summaryPrice.textContent = SERVICE_PRICES[service];
+      summaryBox.hidden = false;
+    } else {
+      summaryBox.hidden = true;
+    }
+  }
+
   if (serviceSelect) {
     serviceSelect.addEventListener('change', function () {
       toggleConditional(serviceSelect.value);
+      updateSummary(serviceSelect.value);
     });
 
     // الباقة المختارة من الصفحة الرئيسية تصل عبر ?service=slug
@@ -73,6 +89,7 @@
     }
 
     toggleConditional(serviceSelect.value); // الحالة الابتدائية
+    updateSummary(serviceSelect.value);
   }
 
   if (!form) return;

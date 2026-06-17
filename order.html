@@ -38,6 +38,12 @@
         </select>
       </label>
 
+      <div class="order-summary" id="orderSummary" hidden>
+        <span class="order-summary-label">باقتك المختارة</span>
+        <span class="order-summary-name" id="summaryName">—</span>
+        <span class="order-summary-price" id="summaryPrice"></span>
+      </div>
+
       <!-- النوع ١: بطاقة مبرمجة -->
       <div class="conditional" data-for="بطاقة مبرمجة">
         <label class="field">
@@ -64,6 +70,12 @@
       <!-- النوع ٣: صمّم واطبع — نموذج طلب تصميم احترافي -->
       <div class="conditional" data-for="صمّم واطبع">
         <p class="brief-title">📋 نموذج طلب التصميم — كل ما نحتاجه لتصميم بطاقتك باحترافية:</p>
+
+        <label class="field">
+          <span>الاسم كما يظهر على البطاقة <em>*</em></span>
+          <input type="text" name="b_cardname" data-label="الاسم على البطاقة" placeholder="مثال: محمد العتيبي" required disabled />
+          <small class="hint">الاسم الذي سيُطبع على وجه البطاقة (قد يختلف عن اسم مقدّم الطلب).</small>
+        </label>
 
         <div class="form-row">
           <label class="field">
@@ -175,7 +187,7 @@
           📎 لا تنسى إرفاق صورة الشعار/التصميم في محادثة الواتساب.
         </p>
         <div class="form-sent" id="formSent" hidden>
-          ✅ تم تجهيز طلبك! إذا لم يفتح واتساب تلقائياً اضغط الزر:
+          📲 طلبك جاهز — لم يُرسل بعد! لإكماله افتح واتساب وأرسل الرسالة. إذا لم يفتح تلقائياً اضغط الزر:
           <a class="btn btn-primary" id="waFallback" href="#" target="_blank" rel="noopener">افتح واتساب وأكمل الطلب</a>
         </div>
       </div>
